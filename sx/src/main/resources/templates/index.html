@@ -48,7 +48,7 @@
 					<td th:text="${t.id}">id</td>
 					<td th:text="${t.name}">name</td>
 					<td th:text="${t.description}">description</td>
-					<td th:text="${t.dateCreated}">date created</td>
+					<td th:text="${#calendars.format(t.dateCreated,'yyyy-MM-dd hh:mm:ss') }">date created</td>
 					<td th:text="${t.finished}? 'yes':'no'" ></td>
 					<td><a href="#" th:href="@{|/${t.id}/update|}"><span class="glyphicon glyphicon-pencil"></span></a></td>
 					<td><a href="#" th:href="@{|/${t.id}/delete|}"><span class="glyphicon glyphicon-trash"></span></a></td>
